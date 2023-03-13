@@ -1,0 +1,34 @@
+@keyframes open {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  body {
+    background: #000;
+    height: 100vh;
+    font-family: sans-serif;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+  }
+  
+  #randomVid1 {
+      display: flex;
+    justify-content: center;
+  animation: open 1s ease-in-out;
+  padding-bottom: 20px;
+  }
+  
+  #randomVid2 {  
+    display: flex;
+    justify-content: center;
+    animation: open 2s ease-in-out;
+    padding-bottom: 20px;
+  }
+  
+  #randomVid3 {
+    display: flex;
+    justify-content: center;
+    animation: open 3s ease-in-out;
+  }
