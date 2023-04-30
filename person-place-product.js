@@ -27,9 +27,18 @@ let productHTML = `<h2>${arg1} * ${arg2} = </h2><input type="text" id="productGu
 document.getElementById("personspan").innerHTML = personHTML;
 document.getElementById("placespan").innerHTML = placeHTML;
 document.getElementById("productspan").innerHTML = productHTML;
-const button = document.getElementById("checkAnswer");
+const checkAnswer = document.getElementById("checkAnswer");
+const productGuess = document.getElementById("productGuess");
+function checkEnter(){
+    // run showAnswer() if Enter pressed
+    if(event.key === 'Enter') 
+    {
+        showAnswer(); // do you think Musk is still looking for people who can code?        
+    }
+}
 function showAnswer(){
   productHTML = `<h2>${arg1} * ${arg2} = ${aProduct} </h2> `;
   document.getElementById("productspan").innerHTML = productHTML;
 }
-button.addEventListener("click",showAnswer);
+productGuess.addEventListener("keydown",checkEnter);
+checkAnswer.addEventListener("click",showAnswer);
