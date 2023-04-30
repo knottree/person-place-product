@@ -23,7 +23,8 @@ const minArg = 7;
 const arg1 = randomProductArg(minArg,maxArg);
 const arg2 = randomProductArg(minArg,maxArg);
 const aProduct = arg1 * arg2;
-let productHTML = `<h2>${arg1} * ${arg2} = </h2><input type="text" id="productGuess"><button onclick="showAnswer()">Check</button>`;
+let productHTML = `<h2>${arg1} * ${arg2} = </h2><input type="text" id="productGuess"><button id="checkAnswer">Check</button>`;
+const button = document.getElementById("checkAnswer");
 document.getElementById("personspan").innerHTML = personHTML;
 document.getElementById("placespan").innerHTML = placeHTML;
 document.getElementById("productspan").innerHTML = productHTML;
@@ -31,3 +32,4 @@ function showAnswer(){
   productHTML = `<h2>${arg1} * ${arg2} = ${aProduct} </h2> `;
   document.getElementById("productspan").innerHTML = productHTML;
 }
+button.addEventListener("click",showAnswer);
